@@ -11,6 +11,11 @@
 -  Schedule preferred date and time  
 -  Admin-side booking management *(coming soon)*
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - HTML, CSS, JavaScript 
+
+## Contact
+<h3>Developer: Asiqul Islam Joy</h3>
+<h4>📧 Email: ashikjoy198@gmail.com<br></h4>
+<h4>📱 WhatsApp: +8801861677258</h4>
