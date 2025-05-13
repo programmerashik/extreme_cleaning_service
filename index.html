@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Cleaning Service | Professional Cleaning in Cyprus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e87c3d;
+            --primary-dark: #d1662a;
+            --secondary: #3d2b1f;
+            --light: #f7f2ef;
+            --white: #ffffff;
+            --text: #333333;
+            --text-light: #666666;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(232, 124, 61, 0.3);
+        }
+
+        .button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(232, 124, 61, 0.4);
+        }
+
+        .button.secondary {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            margin-left: 1rem;
+        }
+
+        .button.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Features Section */
+        .section {
+            padding: 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        form#bookingForm {
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        form#bookingForm .section {
+            padding: 15px 30px;
+            margin-bottom: 0px !important;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h3 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .card p {
+            color: var(--text-light);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-image {
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: auto;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .testimonials .section-title h3,
+        .testimonials .section-title p {
+            color: var(--white);
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '\201C';
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h5 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Contact Section */
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        .contact-details h5 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details p,
+        .contact-details a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            margin-right: 1rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Form Styles */
+        .form-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: bold !important;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .form-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(232, 124, 61, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Booking Form Specific Styles */
+        #man {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #ffffff;
+            border-radius: 100%;
+            margin: 0 auto 20px;
+        }
+
+        #man img {
+            width: 100%;
+            border-radius: 100%;
+        }
+
+        .book {
+            background-color: #e47c44;
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .option-group {
+            margin-left: 15px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .option input[type="radio"],
+        .option input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .property-option {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .property-option:hover {
+            background-color: var(--light);
+        }
+
+        .property-option.selected {
+            font-weight: bold;
+            background-color: rgba(232, 124, 61, 0.1);
+        }
+
+        .checkmark {
+            /* float: right; */
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--primary);
+        }
+
+        .form-submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        .form-submit-btn:hover {
+            background-color: var(--primary);
+        }
+
+        .inline-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .inline-section {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .inline-group {
+                flex-direction: column;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+        }
+
+        .left div {
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background-color: var(--white);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: var(--light);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: var(--white);
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-column h4:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+            bottom: -8px;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .button.secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title h3 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="Extreme Cleaning Logo">
+                <div class="logo-text">
+                    <h1>Extreme Cleaning</h1>
+                    <p>Clean Cyprus up to 10X Effectively</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Extreme Clean. Extreme Shine.</h2>
+            <p>Professional cleaning services in Cyprus with student-friendly prices and exceptional quality</p>
+            <div class="button-container">
+                <a href="#contact" class="button">BOOK A CLEANING</a>
+                <a href="#services" class="button secondary">OUR SERVICES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="section-title">
+            <h3>Why Choose Us</h3>
+            <p>We go above and beyond to provide exceptional cleaning services tailored to your needs</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>High Quality Cleaning</h4>
+                <p>Our trained professionals use premium products and techniques for spotless results every time.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Reliable & Trustworthy</h4>
+                <p>All our cleaners are background-checked and insured for your peace of mind.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h4>Flexible Scheduling</h4>
+                <p>Available 7 days a week with same-day booking options for your convenience.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-thumbs-up"></i>
+                </div>
+                <h4>Satisfaction Guarantee</h4>
+                <p>If you're not 100% satisfied, we'll come back and re-clean at no extra cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="section-title">
+            <h3>Our Services</h3>
+            <p>Customized cleaning solutions for every need and budget</p>
+        </div>
+        <div class="cards">
+            <div class="card service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Apartment Cleaning">
+                </div>
+                <div class="service-content">
+                    <h4>Apartment Cleaning</h4>
+                    <p>Complete cleaning of your entire apartment, including all rooms and surfaces.</p>
+                    <div class="service-price">From €50</div>
+                </div>
+            </div>
+            <div class="card service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Airbnb Turnover">
+                </div>
+                <div class="service-content">
+                    <h4>Airbnb Turnover</h4>
+                    <p>Quick and thorough cleaning between guests with fresh linens and amenities.</p>
+                    <div class="service-price">From €60</div>
+                </div>
+            </div>
+            <div class="card service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Deep Clean">
+                </div>
+                <div class="service-content">
+                    <h4>Deep Clean</h4>
+                    <p>Intensive cleaning of every nook and cranny for a fresh start.</p>
+                    <div class="service-price">From €80</div>
+                </div>
+            </div>
+            <div class="card service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                        alt="Kitchen/Bathroom Only">
+                </div>
+                <div class="service-content">
+                    <h4>Kitchen/Bathroom Only</h4>
+                    <p>Focus on high-traffic areas that need the most attention.</p>
+                    <div class="service-price">From €35</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-title">
+            <h3>About Our Company</h3>
+            <p>Our story and what makes us different</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h4>Our Story</h4>
+                <p>Founded in 2020 by university students in Larnaca, we started with a simple mission: provide
+                    affordable, high-quality cleaning services for fellow students and residents.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h4>Our Mission</h4>
+                <p>To deliver extreme cleaning results with student-friendly prices, while providing flexible work
+                    opportunities for students.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Our Growth</h4>
+                <p>From a small team of 3 students to now serving over 200 satisfied customers across Cyprus with a team
+                    of 15 professional cleaners.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="section-title">
+            <h3>What Our Clients Say</h3>
+            <p>Don't just take our word for it - hear from our satisfied customers</p>
+        </div>
+        <div class="cards">
+            <div class="card testimonial-card">
+                <div class="testimonial-content">
+                    "The Extreme Cleaning team did an amazing job with my apartment. It was spotless and smelled fresh
+                    when I returned from my trip. Will definitely book again!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria K.">
+                    </div>
+                    <div class="author-info">
+                        <h5>Maria K.</h5>
+                        <p>Larnaca</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card testimonial-card">
+                <div class="testimonial-content">
+                    "As an Airbnb host, I rely on quick turnovers between guests. These guys are always punctual and do
+                    thorough work. Highly recommend their service!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Andreas P.">
+                    </div>
+                    <div class="author-info">
+                        <h5>Andreas P.</h5>
+                        <p>Nicosia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card testimonial-card">
+                <div class="testimonial-content">
+                    "The deep clean service was worth every euro! They got rid of stains and odors I thought were
+                    permanent. My kitchen looks brand new again."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena S.">
+                    </div>
+                    <div class="author-info">
+                        <h5>Elena S.</h5>
+                        <p>Limassol</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="section-title">
+            <h3>Frequently Asked Questions</h3>
+            <p>Answers to common questions about our services</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What areas do you serve?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We currently serve all major cities in Cyprus including Larnaca, Nicosia, Limassol, and
+                            Paphos. Additional travel fees may apply for locations outside city centers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's included in a standard cleaning?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our standard cleaning includes dusting all surfaces, vacuuming/mopping floors, cleaning
+                            bathrooms and kitchen, emptying trash, and making beds. We can customize based on your
+                            specific needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need to provide cleaning supplies?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, our team comes fully equipped with professional-grade cleaning supplies and equipment. If
+                            you prefer us to use specific products you provide, just let us know in advance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do you determine pricing?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Prices are based on the size of your space, type of service requested, and frequency of
+                            cleaning. We offer discounts for recurring bookings and student customers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your cleaners insured?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our cleaners are fully insured and bonded. Your property is protected in the rare
+                            case of any damage occurring during cleaning.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I pay for services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash, credit/debit cards, and bank transfers. Payment is due after service
+                            completion unless you've arranged a different payment schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-title">
+            <h3>Get in Touch</h3>
+            <p>Ready to experience the Extreme Cleaning difference? Contact us today!</p>
+        </div>
+        <div class="form-card">
+<div style="text-align: center;"><img src="logo.jpg" alt="" style="width: 25%; border-radius: 50%;border: 2px solid #ddd;"></div>
+            <h1 class="book">Booking Form</h1>
+
+            <form id="bookingForm">
+                <!-- SERVICE MODE SECTION -->
+                <div class="section">
+                    <div class="section-title">SERVICE MODE</div>
+                    <div class="option-group">
+                        <div class="option">
+                            <input type="radio" id="fixedPrice" name="serviceMode" value="Fixed Price (Per Room)"
+                                checked data-price="0">
+                            <label for="fixedPrice">Fixed Price (Per Room)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="hourlyBased" name="serviceMode" value="Hourly Based"
+                                data-price="25">
+                            <label for="hourlyBased">Hourly Based (€25/hour)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PACKAGE TYPE SECTION -->
+                <div class="section">
+                    <div class="section-title">PACKAGE TYPE</div>
+                    <div class="option-group">
+                        <div class="option">
+                            <input type="radio" id="clientTools" name="packageType"
+                                value="Client Provides Tools (Basic)" data-price="0">
+                            <label for="clientTools">Client Provides Tools (Basic)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="weBringTools" name="packageType" value="We Bring Tools (Standard)"
+                                checked data-price="20">
+                            <label for="weBringTools">We Bring Tools (Standard) +€20</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROPERTY DETAILS SECTION -->
+                <div class="section">
+                    <div class="section-title">PROPERTY DETAILS</div>
+                    <table>
+                        <tr class="property-option" data-value="Studio / 1 Bedroom" data-price="50">
+                            <td>Studio / 1 Bedroom</td>
+                            <td class="checkmark">✓</td>
+                        </tr>
+                        <tr class="property-option" data-value="2 Bedrooms" data-price="70">
+                            <td>2 Bedrooms</td>
+                            <td class="checkmark"></td>
+                        </tr>
+                        <tr class="property-option" data-value="3+ Bedrooms" data-price="90">
+                            <td>3+ Bedrooms</td>
+                            <td class="checkmark"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- BATHROOM & ADD-ONS SECTION -->
+                <div class="inline-group left">
+                    <div class="inline-section">
+                        <div class="section-title">Bathroom Cleaning</div>
+                        <div class="option-group">
+                            <div class="option">
+                                <input type="radio" id="bathroomYes" name="bathroom" value="Yes (charges apply)" checked
+                                    data-price="15">
+                                <label for="bathroomYes">Yes (+15€)</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bathroomNo" name="bathroom" value="No" data-price="0">
+                                <label for="bathroomNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-section">
+                        <div class="section-title">ADD-ONS</div>
+                        <div class="option-group">
+                            <div class="option">
+                                <input type="checkbox" id="roofClean" name="addons" value="Roof Clean (€30)"
+                                    data-price="30">
+                                <label for="roofClean">Roof Cleaning (+€30)</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="terraceClean" name="addons"
+                                    value="Terrace/Veranda Clean (€20)" data-price="20">
+                                <label for="terraceClean">Terrace/Veranda Cleaning (+€20)</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="windowClean" name="addons" value="Window Clean (€15)"
+                                    data-price="15">
+                                <label for="windowClean">Window Clean (+€15)</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="deepClean" name="addons" value="Deep Clean (€15)"
+                                    data-price="15">
+                                <label for="deepClean">Deep Clean (+€15)</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="wallWash" name="addons" value="Wall Wash (€25)"
+                                    data-price="25">
+                                <label for="wallWash">Wall Washing (+€25)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SCHEDULE SECTION -->
+                <div class="section bold">
+                    <div class="section-title">SCHEDULE</div>
+                    <input type="date" id="date" class="form-control" required>
+                    <select id="dateTime" name="dateTime" class="form-control" required>
+                        <option value="">Select Time Slot...</option>
+                        <option value="Morning (9AM-12PM)">Morning (9AM-12PM)</option>
+                        <option value="Afternoon (1PM-5PM)">Afternoon (1PM-5PM)</option>
+                        <option value="Evening (6PM-9PM)">Evening (6PM-9PM)</option>
+                    </select>
+
+                    <input type="text" id="address" name="address" class="form-control" placeholder="Full Address"
+                        required>
+                    <textarea id="extraComment" name="extraComment" class="form-control"
+                        placeholder="Any special instructions or comments..." rows="3"></textarea>
+                </div>
+
+                <!-- CONTACT INFORMATION SECTION -->
+                <div class="section bold">
+                    <div class="section-title">CONTACT INFORMATION</div>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number" required>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email Address"
+                        required>
+                </div>
+                <div class="price" id="estimatedPrice">ESTIMATED PRICE €85</div>
+                <button type="submit" class="form-submit-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Extreme Cleaning</h4>
+                <p>Providing exceptional cleaning services across Cyprus with student-friendly prices and flexible
+                    scheduling.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Apartment Cleaning</a></li>
+                    <li><a href="#">Airbnb Turnover</a></li>
+                    <li><a href="#">Deep Clean</a></li>
+                    <li><a href="#">Kitchen/Bathroom Only</a></li>
+                    <li><a href="#">Move In/Out Cleaning</a></li>
+                    <li><a href="#">Commercial Cleaning</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Student Discount</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Extreme Cleaning Service. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Price calculation variables
+        let basePrice = 50;
+        let bathroomPrice = 15;
+        let packagePrice = 20;
+        let serviceModePrice = 0;
+        let addonsPrice = 0;
+        let hourlyRate = 25;
+        let isHourly = false;
+
+        // DOM elements
+        const estimatedPriceElement = document.getElementById('estimatedPrice');
+        const hourlyBasedRadio = document.getElementById('hourlyBased');
+        const fixedPriceRadio = document.getElementById('fixedPrice');
+
+        // Property type selection
+        const propertyOptions = document.querySelectorAll('.property-option');
+        let selectedProperty = "Studio / 1 Bedroom";
+
+        // Initialize property options
+        propertyOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                propertyOptions.forEach(opt => {
+                    opt.querySelector('.checkmark').textContent = '';
+                    opt.classList.remove('selected');
+                });
+
+                this.querySelector('.checkmark').textContent = '✓';
+                this.classList.add('selected');
+                selectedProperty = this.getAttribute('data-value');
+                basePrice = parseInt(this.getAttribute('data-price'));
+                updatePrice();
+            });
+        });
+
+        // Set first option as selected by default
+        if (propertyOptions.length > 0) {
+            propertyOptions[0].classList.add('selected');
+        }
+
+        // Bathroom selection
+        document.querySelectorAll('input[name="bathroom"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                bathroomPrice = parseInt(this.getAttribute('data-price'));
+                updatePrice();
+            });
+        });
+
+        // Add-ons selection
+        document.querySelectorAll('input[name="addons"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                updatePrice();
+            });
+        });
+
+        // Service mode selection
+        document.querySelectorAll('input[name="serviceMode"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                serviceModePrice = parseInt(this.getAttribute('data-price'));
+                isHourly = this.id === 'hourlyBased';
+                updatePrice();
+            });
+        });
+
+        // Package type selection
+        document.querySelectorAll('input[name="packageType"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                packagePrice = parseInt(this.getAttribute('data-price'));
+                updatePrice();
+            });
+        });
+
+        // Function to update the price display
+        function updatePrice() {
+            addonsPrice = 0;
+            document.querySelectorAll('input[name="addons"]:checked').forEach(checkbox => {
+                addonsPrice += parseInt(checkbox.getAttribute('data-price'));
+            });
+
+            let totalPrice;
+            if (isHourly) {
+                const hourlyMinimum = hourlyRate;
+                const additionalCharges = bathroomPrice + packagePrice + addonsPrice;
+                totalPrice = hourlyMinimum + additionalCharges;
+                estimatedPriceElement.textContent = `ESTIMATED PRICE €${totalPrice} (€${hourlyRate}/hour + €${additionalCharges} additional charges)`;
+            } else {
+                totalPrice = basePrice + bathroomPrice + packagePrice + addonsPrice;
+                estimatedPriceElement.textContent = `ESTIMATED PRICE €${totalPrice}`;
+            }
+        }
+
+        // Form submission with enhanced error handling
+        document.getElementById('bookingForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            try {
+                console.log('Starting form submission process...');
+
+                // Get form values with null checks
+                const getCheckedValue = (name) => {
+                    const el = document.querySelector(`input[name="${name}"]:checked`);
+                    return el ? el.value : 'Not selected';
+                };
+
+                const serviceMode = getCheckedValue('serviceMode');
+                const packageType = getCheckedValue('packageType');
+                const bathroom = getCheckedValue('bathroom');
+
+                // Get selected add-ons
+                const addons = [];
+                document.querySelectorAll('input[name="addons"]:checked').forEach(checkbox => {
+                    addons.push(checkbox.value);
+                });
+
+                // Get other form values
+                const getValue = (id) => {
+                    const el = document.getElementById(id);
+                    return el ? el.value : 'Not provided';
+                };
+
+                const formData = {
+                    serviceMode,
+                    packageType,
+                    propertyType: selectedProperty,
+                    bathroom,
+                    addons: addons.join(', ') || 'None',
+                    date: getValue('date'),
+                    dateTime: getValue('dateTime'),
+                    address: getValue('address'),
+                    extraComment: getValue('extraComment'),
+                    name: getValue('name'),
+                    phone: getValue('phone'),
+                    email: getValue('email')
+                };
+
+                // Calculate final price
+                let additionalCharges = bathroomPrice + packagePrice + addonsPrice;
+                let finalPrice = isHourly ? (hourlyRate + additionalCharges) : (basePrice + additionalCharges);
+
+                let priceMessage = isHourly
+                    ? `Hourly Rate: €${hourlyRate}/hour (minimum 1 hour)\nAdditional Charges: €${additionalCharges}\nEstimated Total: €${finalPrice}`
+                    : `Total Price: €${finalPrice}`;
+
+                // Create WhatsApp message
+                let message = `*New Cleaning Booking Request*\n\n` +
+                    `*Service Mode:* ${formData.serviceMode}\n` +
+                    `*Package Type:* ${formData.packageType}\n` +
+                    `*Property Type:* ${formData.propertyType}\n` +
+                    `*Bathroom Cleaning:* ${formData.bathroom}\n` +
+                    `*Add-ons:* ${formData.addons}\n` +
+                    `*Date:* ${formData.date}\n` +
+                    `*Preferred Time:* ${formData.dateTime}\n` +
+                    `*Address:* ${formData.address}\n` +
+                    `*Special Instructions:* ${formData.extraComment}\n\n` +
+                    `*Client Information*\n` +
+                    `Name: ${formData.name}\n` +
+                    `Phone: ${formData.phone}\n` +
+                    `Email: ${formData.email}\n\n` +
+                    `*${priceMessage}*`;
+
+                // Encode message for URL
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappNumber = '+8801861677258'; // Replace with your number
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                console.log('Generated WhatsApp URL:', whatsappUrl);
+
+                // Open WhatsApp in a new tab
+                const newWindow = window.open(whatsappUrl, '_blank');
+                if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                    throw new Error('Popup window was blocked. Please allow popups for this site.');
+                }
+
+                // Send data to Google Sheets
+                const sheetsData = {
+                    ...formData,
+                    priceDetails: priceMessage,
+                    totalPrice: finalPrice,
+                    timestamp: new Date().toLocaleString()
+                };
+
+                const sheetsSuccess = await sendToGoogleSheets(sheetsData);
+                if (!sheetsSuccess) {
+                    console.warn('Data might not have been saved to Google Sheets');
+                }
+
+                // Optional: Show success message to user
+                alert('Booking request sent successfully! We will contact you shortly.');
+
+            } catch (error) {
+                console.error('Error during form submission:', error);
+                alert(`Error: ${error.message}\nPlease contact us directly at +8801861677258`);
+            }
+        });
+
+        // Improved Google Sheets submission function
+        async function sendToGoogleSheets(formData) {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxdccwqq3bxYthconTlGlzvqF9PT8R_FYF4FdO4A4eyRNzqJhlA36mklWRDIT8YyrePuQ/exec';
+
+            try {
+                console.log('Sending data to Google Sheets:', formData);
+
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                console.log('Google Sheets response:', result);
+
+                if (result.status === "success") {
+                    return true;
+                } else {
+                    throw new Error(result.message || 'Unknown server error');
+                }
+            } catch (error) {
+                console.error('Error sending to Google Sheets:', error);
+                return false;
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenu.innerHTML = navLinks.classList.contains('active')
+                    ? '<i class="fas fa-times"></i>'
+                    : '<i class="fas fa-bars"></i>';
+            });
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+
+                const icon = question.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                }
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (this.getAttribute('href') === '#') return;
+
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (navLinks && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (header) {
+                header.classList.toggle('sticky', window.scrollY > 0);
+            }
+        });
+    </script>
+</body>
+
+</html>
